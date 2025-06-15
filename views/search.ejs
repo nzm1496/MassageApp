@@ -1,0 +1,21 @@
+<!-- views/search.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>メッセージ検索</title>
+  </head>
+  <body>
+    <h1>メッセージ検索</h1>
+    <form method="POST" action="/search">
+      <input type="text" name="searchText" placeholder="検索語を入力" required />
+      <button type="submit">検索</button>
+    </form>
+
+    <h2>検索結果</h2>
+    <ul>
+      <% results.forEach(result => { %>
+        <li><%= result %></li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
